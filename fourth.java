@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import static java.lang.Math.sqrt;
-
 public class fourth {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -19,7 +17,7 @@ public class fourth {
             x = in.nextDouble();
             System.out.print("Введите Y" + i + " точку: ");
             y = in.nextDouble();
-            if (sqrt(x * x + y * y) <= r)
+            if ((x * x + y * y) <= (r * r))
                 k = k + 1;
         }
         System.out.print(k + " точек попали в окружность");
