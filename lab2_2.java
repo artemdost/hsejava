@@ -14,9 +14,13 @@ public class lab2_2 {
         while (cond == false) {
             s = in.nextLine();
             if (s.length() >= 8) {
-                if ((Pattern.compile("[A-Z]+[a-z]+_+[0-9]").matcher(s).find()) == true) {
-                    if ((Pattern.compile("[a-zA-Z0-9_]+").matcher(s).find()) == true) {
-                        cond = true;
+                if ((Pattern.compile("[a-z]+").matcher(s).find()) == true) {
+                    if ((Pattern.compile("[A-Z]+").matcher(s).find()) == true) {
+                        if ((Pattern.compile("[0-9]+").matcher(s).find()) == true) {
+                            if ((Pattern.compile("[_]+").matcher(s).find()) == true) {
+                                cond = true;
+                            }
+                        }
                     }
                 }
             }
